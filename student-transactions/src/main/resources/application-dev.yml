@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/student
+    password: root
+    username: root
+    jpa:
+      hibernate:
+        ddl-auto: update
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      show-sql: true
+    hikari:
+      connectionTimeout: 10000
+      connectionInitSql: select now()
+      connectionTestQuery: select now()
+      maximumPoolSize: 350
+      minimumIdle: 1

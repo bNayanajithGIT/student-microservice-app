@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: student-service
+  jmx:
+    default-domain: ${spring.application.name}
+
+server:
+  port: 0
+  servlet:
+    context-path: /api/student/
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+  client:
+    eureka-server-port: 8761
+
+

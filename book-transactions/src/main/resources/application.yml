@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: book-service
+
+server:
+  port: 0
+  servlet:
+    context-path: /api/book/
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+  client:
+    eureka-server-port: 8761
